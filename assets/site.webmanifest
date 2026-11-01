@@ -1,0 +1,17 @@
+{
+  "name": "Prague · 23 по 29 ноября",
+  "short_name": "Prague",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8f6f2",
+  "theme_color": "#7c2d3a",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
