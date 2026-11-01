@@ -32,7 +32,7 @@
         <div class="place-ico">${p.icon || '⭐'}</div>
         <div style="flex:1;min-width:0">
           <h3 style="margin:0">${p.name}</h3>
-          <p class="muted small" style="margin:4px 0 0">${p.area || ''}${p.day ? ` · ${p.day}` : ''}${p.ig ? ' · инстаграм' : ''}</p>
+          <p class="muted small" style="margin:4px 0 0">${p.area || ''}${p.day ? ` · ${p.day}` : ''}${p.ig ? ' · инстаграм' : ''}${p.mine ? ' · мои' : ''}</p>
         </div>
         ${p.score ? `<div class="place-score">${p.score}<span>/10</span></div>` : ''}
       </div>
@@ -57,18 +57,24 @@
       return `<button type="button" class="filter-chip${t.id === active ? ' active' : ''}" data-place-filter="${t.id}">${t.icon} ${t.label}<span>${count}</span></button>`;
     }).join('');
 
-    const igNote = `<p class="muted small" style="margin:-4px 0 12px">Только то, чего нет в городе и остальных рубриках. Град, мост, площадь и остальные помечены словом «инстаграм» на своей карточке.</p>`;
+    const igNote = `<p class="muted small" style="margin:-4px 0 12px">Только то, чего нет в городе и остальных рубриках. Град, мост, площадь и остальные помечены словом «инстаграм» на своей карточке. «мои» это то, что было в рилсах, которые ты прислала.</p>`;
+    const igGrid = (group) => {
+      const mine = group.filter((p) => p.mine);
+      const rest = group.filter((p) => !p.mine);
+      return `
+        ${igNote}
+        ${mine.length ? `<p class="muted small" style="margin:0 0 8px">Мои</p><div class="place-grid">${mine.map((p) => placeCard(p)).join('')}</div>` : ''}
+        ${rest.length ? `<div class="place-grid" style="margin-top:16px">${rest.map((p) => placeCard(p)).join('')}</div>` : ''}`;
+    };
     const grouped = active === 'all'
       ? types.filter((t) => t.id !== 'all').map((t) => {
           const group = items.filter((p) => matches(p, t.id));
           if (!group.length) return '';
           return `
             <div class="divider" id="type-${t.id}">${t.icon} ${t.label}</div>
-            ${t.id === 'ig' ? igNote : ''}
-            <div class="place-grid">${group.map((p) => placeCard(p)).join('')}</div>`;
+            ${t.id === 'ig' ? igGrid(group) : `<div class="place-grid">${group.map((p) => placeCard(p)).join('')}</div>`}`;
         }).join('')
-      : `${active === 'ig' ? igNote : ''}
-        <div class="place-grid">${list.map((p) => placeCard(p)).join('')}</div>`;
+      : `${active === 'ig' ? igGrid(list) : `<div class="place-grid">${list.map((p) => placeCard(p)).join('')}</div>`}`;
 
     return `
     <section class="section wrap">
