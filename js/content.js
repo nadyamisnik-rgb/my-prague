@@ -200,7 +200,6 @@
       <a class="hub-tile" href="#must"><span class="hub-ico">✦</span><strong>Мастхэв</strong><span>Еда, сувениры, что увидеть</span></a>
       <a class="hub-tile" href="#food"><span class="hub-ico">🍽</span><strong>Еда</strong><span>Куда садиться одной</span></a>
       <a class="hub-tile" href="#transport"><span class="hub-ico">🚇</span><strong>Дорога</strong><span>Аэропорт и проездной</span></a>
-      <a class="hub-tile" href="#packing"><span class="hub-ico">🧥</span><strong>Сумка</strong><span>Сыро и скользко</span></a>
       <a class="hub-tile" href="#markets"><span class="hub-ico">🎄</span><strong>Ярмарки</strong><span>Ёлка, толпа, первый раз</span></a>
     </div>
 
