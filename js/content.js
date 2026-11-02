@@ -203,20 +203,6 @@
       <a class="hub-tile" href="#markets"><span class="hub-ico">🎄</span><strong>Ярмарки</strong><span>Ёлка, толпа, первый раз</span></a>
     </div>
 
-    <div class="card card-soft">
-      <p style="margin:0"><strong>Где жить.</strong> Квартира знакомых, точного адреса пока нет. Они улетают 25-го, с этого вечера коты на тебе. 24-го вечером ключи, корм и ужин с ними. Когда будет улица, впишем метро и дорогу от аэропорта.</p>
-    </div>
-
-    <div class="callout callout-gold" style="margin-top:14px">
-      <strong>Свет</strong>
-      24 ноября солнце садится в 16:08, 29-го в 16:04. Рассвет около 7:30. Улица работает с девяти до трёх. После четырёх ты уже в кафе или в пивной.
-    </div>
-
-    <div class="callout callout-paprika" style="margin-top:10px">
-      <strong>Выезд в воскресенье</strong>
-      Автобус с главного вокзала около 20:00. Из квартиры выходи в 18:30. До Praha hlavní nádraží закладывай час, ветка станет ясна с адресом. К платформе лучше к 19:30, с чемоданом у выхода не стой. Котам оставь еду до отъезда, как скажут хозяева.
-    </div>
-
     <div class="chip-row" style="margin-top:8px">
       <a class="pill pill-muted" href="#day23" style="text-decoration:none">23 · Вильнюс</a>
       <a class="pill pill-danube" href="#day24" style="text-decoration:none">24 · прилёт</a>
