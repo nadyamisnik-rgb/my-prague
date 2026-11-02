@@ -37,7 +37,7 @@
       image: 'https://images.unsplash.com/photo-1592906209472-a36b1f3782ef?auto=format&fit=crop&w=1400&q=80',
       imageAlt: 'Карлов мост и башни',
       pills: ['дворец с 10:00', 'Муха до 18:00'],
-      flow: 'Велетржный дворец, обед на Dlouhá, Чёрная мадонна, конь, кофе',
+      flow: 'Велетржный дворец, площадь, Луцерна, Национальный музей',
       mapsAll: gmaps('Veletržní palác Prague')
     },
     day27: {
@@ -50,12 +50,12 @@
       mapsAll: gmaps('Vyšehrad Prague')
     },
     day28: {
-      title: 'Рынки и музей',
+      title: 'Рынки и ёлка',
       idea: 'Суббота. Ёлку зажигают в 16:30. Вечер на площади.',
       image: 'https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=1400&q=80',
       imageAlt: 'Мост и Град',
       pills: ['рынок с 10:00', 'ёлка в 16:30'],
-      flow: 'Рынок днём, Национальный музей, Výtopna, зажигание ёлки',
+      flow: 'Рынок днём, Výtopna, зажигание ёлки',
       mapsAll: gmaps('Old Town Square Prague')
     },
     day29: {
