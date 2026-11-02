@@ -764,6 +764,33 @@ tr:last-child td { border-bottom: none; }
   font-size: 0.98rem;
 }
 
+.day-mood {
+  margin: 10px 0 0;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #7c2d3a;
+  color: #f8ecee;
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.day-mood span {
+  display: block;
+  margin-bottom: 2px;
+  color: #f3d5c4;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.day-note {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
 .day-page > .callout {
   margin: 0 0 14px;
 }

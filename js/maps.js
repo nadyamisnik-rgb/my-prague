@@ -55,7 +55,7 @@
       image: 'assets/places/oldtown.jpg',
       imageAlt: 'Староместская площадь',
       pills: ['рынок с 10:00', 'ёлка в 16:30'],
-      flow: 'Рынок днём, Výtopna, зажигание ёлки',
+      flow: 'Рынок, LEGO, Výtopna, зажигание ёлки',
       mapsAll: gmaps('Old Town Square Prague')
     },
     day29: {
