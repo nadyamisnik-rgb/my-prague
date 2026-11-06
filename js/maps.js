@@ -19,7 +19,7 @@
       image: 'assets/places/bus.jpg',
       imageAlt: 'Остановка линии 59 у терминала',
       pills: ['вылет 10:00', 'у них в 18 или 19'],
-      flow: 'Троллейбус 59, ячейка, синий в 15:15 если успеваешь, к ребятам',
+      flow: 'Из аэропорта 59 / AE / Bolt, ячейка, синий если успеваешь, к ребятам',
       mapsAll: gmaps('Praha hlavní nádraží luggage lockers')
     },
     day25: {

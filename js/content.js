@@ -11,6 +11,7 @@
     guide: 'https://www.guide-prague.org/ru',
     litacka: 'https://pidlitacka.cz/',
     pidAir: 'https://pid.cz/en/travel-information/airport-and-stations/',
+    ae: 'https://www.cd.cz/en/dalsi-sluzby/navazna-doprava/-27548/',
     hrad: 'https://www.hrad.cz/en/prague-castle-for-visitors/tickets',
     jewish: 'https://www.jewishmuseum.cz/en/info/visit/discover-prague-s-jewish-town/',
     klemen: 'https://prague.eu/en/objevujte/the-clementinum-astronomical-tower-and-baroque-library/',
@@ -155,7 +156,7 @@
       { group: 'Поездка', items: [
         { href: '#plan', label: 'План по дням', sub: '23 по 29 ноября' },
         { href: '#overview', label: 'Как легли дни', sub: 'Свет, суббота, выезд' },
-        { href: '#transport', label: 'Дорога', sub: 'Вильнюс, троллейбус 59, Lítačka' }
+        { href: '#transport', label: 'Дорога', sub: 'Из аэропорта: дёшево, просто, быстро' }
       ]},
       { group: 'Город', items: [
         { href: '#places', label: 'Места', sub: 'Карты' },
@@ -305,7 +306,7 @@ ${step({
     </header>
     ${route([
       'Самолёт в 10:00, в Праге около полудня',
-      'Троллейбус 59, метро, ячейка на главном вокзале',
+      'Из аэропорта: дешёвый / простой / быстрый вариант до ячейки',
       'Обед у старта: Lokál U Bílé kuželky или булка, если уже 14:30',
       'После посадки, если к 15:00 успеваешь: бронь синего и экскурсия в 15:15',
       'Чемодан и к ребятам около семи'
@@ -322,11 +323,14 @@ ${step({
 ${step({
   icon: '🚌',
   when: 'после посадки',
-  title: 'Троллейбус 59 и метро до главного вокзала',
-  lead: 'Сразу на вокзал, в ячейку',
+  title: 'Из аэропорта до ячейки',
+  lead: 'Три варианта. Цель одна: главный вокзал',
   placeId: 'bus59',
-  ticket: '90 минут, 46 Kč (€2) в Lítačka',
-  detail: `Билет в ${link(U.litacka, 'PID Lítačka')}, включи до троллейбуса. Расписание на ${link(U.pidAir, 'pid.cz')}. 59 до Nádraží Veleslavín, метро A до Muzeum, пересадка на C, одна остановка до Hlavní nádraží. Около часа. Если устала после самолёта, всё равно сначала ячейка: город без чемодана другой.`,
+  detail: `<ul class="step-points">
+    <li><strong>Дешёвый.</strong> Линия ${link(U.pidAir, '59')} от терминала до метро Nádraží Veleslavín, около 15–20 минут. Это городской PID, раньше был автобус 119, сейчас троллейбус: большой вагон с «рогами», на табло просто 59. Дальше метро A до Muzeum, пересадка на C, одна остановка до Hlavní nádraží. Весь путь около 45–60 минут. Билет на 90 минут в ${link(U.litacka, 'Lítačka')} 46 Kč (€2), бумажный 50 Kč (€2). Включи до посадки. Метро входит в тот же билет.</li>
+    <li><strong>Простой.</strong> ${link(U.ae, 'Airport Express')}, AE. Без пересадок до главного вокзала, около 45 минут. 200 Kč (€8), покупаешь у водителя или в кассе. Обычный PID сюда не подходит. Остановка у Terminal 1.</li>
+    <li><strong>Быстрый.</strong> Bolt или Uber до Hlavní nádraží, обычно 25–35 минут. Ориентир 600–800 Kč (€25–33), цену смотри в приложении до заказа. Если очень устала, можно сразу к ребятам, а ячейку пропустить: чемодан тогда с собой до квартиры.</li>
+  </ul>`,
   maps: gmaps('Praha hlavní nádraží')
 })}
 ${step({
@@ -764,7 +768,7 @@ ${step({
     </div>
     <div class="two-col" style="margin:20px 0 8px">
       <a class="card card-link" href="#overview"><h3 style="margin:0">Почему так</h3><p class="muted small" style="margin:6px 0 0">Свет, суббота, собор</p></a>
-      <a class="card card-link" href="#transport"><h3 style="margin:0">Дорога</h3><p class="muted small" style="margin:6px 0 0">59, метро A, билеты</p></a>
+      <a class="card card-link" href="#transport"><h3 style="margin:0">Дорога</h3><p class="muted small" style="margin:6px 0 0">59, AE или Bolt</p></a>
     </div>
   </section>`;
 
@@ -823,8 +827,13 @@ ${step({
       <p>Выезд так, чтобы в Вильнюсе быть к шести или семи. Ужин, сон. Утром в аэропорт с запасом под вылет в 10:00.</p>
     </div>
     <div class="card">
-      <h3>24 ноября, в Прагу</h3>
-      <p>Вылет в 10:00. Если рейс прямой, в Праге около полудня. Троллейбус 59 до Nádraží Veleslavín, дальше метро до ячейки на главном вокзале. Билет на 90 минут в PID Lítačka, в приложении 46 Kč (€2). Активируй до посадки.</p>
+      <h3>24 ноября, из аэропорта</h3>
+      <p>Вылет в 10:00, в Праге около полудня. До ячейки на главном вокзале три варианта. Полная таблица у ${link(U.pidAir, 'PID')}.</p>
+      <ul>
+        <li><strong>Дешёвый.</strong> Линия 59 до Nádraží Veleslavín + метро A/C до Hlavní nádraží. 45–60 минут. 46 Kč (€2) в Lítačka. Это городской транспорт: раньше автобус 119, сейчас троллейбус, на табло 59.</li>
+        <li><strong>Простой.</strong> ${link(U.ae, 'Airport Express')} прямо на главный вокзал. Без пересадок, около 45 минут. 200 Kč (€8). PID-билет не действует.</li>
+        <li><strong>Быстрый.</strong> Bolt или Uber. 25–35 минут. Ориентир 600–800 Kč (€25–33). Можно сразу к ребятам, если чемодан не хочется тащить через метро.</li>
+      </ul>
     </div>
     <div class="card">
       <h3>Обратно, 29 ноября</h3>
@@ -836,7 +845,7 @@ ${step({
     </div>
     <div class="callout callout-gold">
       <strong>Вечером</strong>
-      Устала, темно, чемодан или скользкая Нерудова: Bolt до двери. От аэропорта и от вокзала едешь на 59, метро или поезде.
+      Устала, темно, чемодан или скользкая Нерудова: Bolt до двери. Из аэропорта днём выбирай: 59+метро, AE или Bolt.
     </div>
   </section>`;
 
