@@ -7,8 +7,8 @@
     day23: {
       title: 'Вильнюс, только ночь',
       idea: 'Ночь у вокзала. Ужин рядом и короткая дуга до собора.',
-      image: '',
-      imageAlt: '',
+      image: 'assets/places/vilnius.jpg',
+      imageAlt: 'Остробрамские ворота в Вильнюсе',
       pills: ['вокзал', 'ужин', 'ворота'],
       flow: 'Таверна, Остробрамские ворота, собор, назад спать',
       mapsAll: gmaps('Aušros vartai Vilnius')
@@ -16,8 +16,8 @@
     day24: {
       title: 'Papa Roach в первый вечер',
       idea: 'Машина с аэропорта. Днём ключи и коты. Вечером зал A.',
-      image: '',
-      imageAlt: '',
+      image: 'assets/places/bus.jpg',
+      imageAlt: 'Остановка у Терминала 1',
       pills: ['вылет 10:00', 'двери 18:00'],
       flow: 'Машина ребят, ключи и коты, синий только если к 14:00 свободна, метро на концерт',
       mapsAll: gmaps('O2 universum Praha')
